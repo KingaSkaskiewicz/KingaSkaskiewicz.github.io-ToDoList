@@ -1,0 +1,33 @@
+#grad {
+  height: 100%;
+  background-image: linear-gradient(purple, pink); }
+
+ul, li {
+  list-style: none;
+  margin: 1em;
+  float: left; }
+
+ul {
+  overflow: hidden;
+  padding: 3em; }
+
+.paper-note:hover, .paper-note:focus {
+  transform: scale(1.25);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  position: relative; }
+
+.paper-note {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  font-size: 22px;
+  transition: transform .15s linear; }
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important; }
+
+.strike-out {
+  text-decoration: line-through; }

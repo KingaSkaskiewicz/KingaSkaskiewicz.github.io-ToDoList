@@ -1,0 +1,50 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/">
+    <title>To do list</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/dist/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl" id="grad">
+
+
+
+    <div class="text-center">
+        <button class="btn btn-primary btn-lg border-light" style="width: 400px" ng-click="addNote()">Dodaj</button>
+    </div>
+
+        <div>
+            <ul>
+                <li ng-repeat="item in model.tasks">
+
+                    <form class="paper-note">
+                        <div class="form-group">
+                            <input type="text" class=" form-control bg-transparent shadow-none border-0" name="date" placeholder="Data">
+                            <textarea class="form-control bg-transparent shadow-none border-0" rows="5" ng-model="item.description" ng-class="{ 'strike-out' : item.isCompleted }" placeholder="Wpisz zadanie"></textarea>
+                            <button class="btn rounded-0 btn-success btn-sm" ng-click="item.isCompleted = true"><i style="font-size:24px" class="fa">&#xf00c;</i></button>
+                            <button class="btn rounded-0 btn-danger btn-sm float-right" ng-click="deleteNote(item)"><i style="font-size:24px" class="fa">&#xf00d;</i></button>
+                        </div>
+
+                    </form>
+
+                </li>
+            </ul>
+
+
+        </div>
+
+        <script src="content/dist/js/app/main.js"></script>
+        <script src="content/dist/js/app/controllers/main.controller.js"></script>
+</body>
