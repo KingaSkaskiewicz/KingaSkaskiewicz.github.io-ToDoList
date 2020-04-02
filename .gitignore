@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ToDoList/.vs
+/ToDoList/Website/bin
+/ToDoList/Website/obj
+/ToDoList/node_modules
+/ToDoList/WebSite/node_modules
