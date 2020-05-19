@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -26,8 +21,11 @@ namespace WebSite
                 app.UseDeveloperExceptionPage();
             }
 
+            //for git pages to work nice with .net debugging
+            app.UsePathBase("/ToDoList");
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            
         }
     }
 }
