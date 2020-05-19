@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\content\dist\css\" />
     <Folder Include="wwwroot\content\dist\js\app\services\" />
   </ItemGroup>
