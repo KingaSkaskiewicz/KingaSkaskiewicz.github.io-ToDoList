@@ -16,36 +16,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <!--Bubble button: Copyright (c) 2020 by Nour Saud (https://codepen.io/nourabusoud/pen/ypZzMM) MIT License-->
+        </head>
+    <body ng-app="myApp" ng-controller="mainCtrl">
 
-</head>
-<body ng-app="myApp" ng-controller="mainCtrl">
-
-    <div id="particles-js"></div>
+        <div id="particles-js"></div>
 
 
 
-    <div class="text-center">
-        <button class="bubbly-button" ng-class="{'animate': model.button.animation }" ng-click="addNote(); model.button.animateButton()">DODAJ</button>
-    </div>
+        <div class="text-center">
+            <button class="bubbly-button" ng-class="{'animate': model.button.animation }" ng-click="addNote(); model.button.animateButton()">DODAJ</button>
+        </div>
 
-    <div>
-        <ul>
-            <li ng-repeat="item in model.tasks">
+        <div>
+            <ul>
+                <li ng-repeat="item in model.tasks">
 
-                <form class="paper-note">
-                    <div class="form-group">
-                        <input type="text" class=" form-control bg-transparent shadow-none border-0" name="date" placeholder="Data">
-                        <textarea class="form-control bg-transparent shadow-none border-0" rows="5" ng-model="item.description" ng-class="{ 'strike-out' : item.isCompleted }" placeholder="Wpisz zadanie"></textarea>
-                        <button class="button-done" ng-click="item.isCompleted = true"><i class="fa">&#xf00c;</i></button>
-                        <button class="button-cancel" ng-click="deleteNote(item)"><i class="fa">&#xf00d;</i></button>
-                    </div>
+                    <form class="paper-note">
+                        <div class="form-group">
+                            <input type="text" class=" form-control bg-transparent shadow-none border-0" name="date" placeholder="Data">
+                            <textarea class="form-control bg-transparent shadow-none border-0" rows="5" ng-model="item.description" ng-class="{ 'strike-out' : item.isCompleted }" placeholder="Wpisz zadanie"></textarea>
+                            <button class="button-done" ng-click="item.isCompleted = true"><i class="fa">&#xf00c;</i></button>
+                            <button class="button-cancel" ng-click="deleteNote(item)"><i class="fa">&#xf00d;</i></button>
+                        </div>
 
-                </form>
+                    </form>
 
-            </li>
-        </ul>
-    </div>
+                </li>
+            </ul>
+        </div>
 
-    <script src="ToDoList/content/dist/js/app/main.js"></script>
-    <script src="ToDoList/content/dist/js/app/controllers/main.controller.js"></script>
-</body>
+        <script src="ToDoList/content/dist/js/app/main.js"></script>
+        <script src="ToDoList/content/dist/js/app/controllers/main.controller.js"></script>
+    </body>
