@@ -1,20 +1,33 @@
-﻿app.controller('mainCtrl', function ($scope, $timeout) {
+﻿app.controller('mainCtrl', function ($scope, $timeout, $window) {
+
+    var dataKey = 'tasks';
 
     $scope.model = {
-        tasks: [{
-            description: '',
-            isCompleted: false
-        }],
         button: {
             animation: false
         }
     };
 
+    var tasksInMemory = $window.localStorage.getItem(dataKey);
+    if (typeof tasksInMemory !== 'undefined' && tasksInMemory != null) {
+        $scope.model.tasks = angular.fromJson(tasksInMemory);
+    }
+    else {
+        $scope.model.tasks = [{
+            description: '',
+            isCompleted: false
+        }];
+    }
+
+    $scope.$watch('model.tasks', function (newVal, oldVal) {
+        $window.localStorage.setItem(dataKey, angular.toJson($scope.model.tasks));
+    }, true);
+
     $scope.addNote = function () {
         $scope.model.tasks.push({
             description: '',
             isCompleted: false
-        });
+        }); 
     }
 
     $scope.deleteNote = function (task) {
