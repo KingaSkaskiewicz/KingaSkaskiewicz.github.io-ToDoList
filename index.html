@@ -35,7 +35,7 @@
 
                     <form class="paper-note">
                         <div class="form-group">
-                            <input type="text" class=" form-control bg-transparent shadow-none border-0" name="date" placeholder="Data">
+                            <input type="text" class=" form-control bg-transparent shadow-none border-0" name="date" placeholder="Data" ng-model="item.date">
                             <textarea class="form-control bg-transparent shadow-none border-0" rows="5" ng-model="item.description" ng-class="{ 'strike-out' : item.isCompleted }" placeholder="Wpisz zadanie"></textarea>
                             <button class="button-done" ng-click="item.isCompleted = true"><i class="fa">&#xf00c;</i></button>
                             <button class="button-cancel" ng-click="deleteNote(item)"><i class="fa">&#xf00d;</i></button>
